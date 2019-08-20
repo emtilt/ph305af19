@@ -1,0 +1,329 @@
+\documentclass[11pt]{article}
+
+\title{Regis University Physics 305A: General Physics with Calculus Laboratory I, Fall 2019}
+\author{Frederick Gray}
+
+\usepackage{url}
+\usepackage[cm]{fullpage}
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\setcounter{secnumdepth}{0}
+
+\newcommand{\squishlist}{
+   \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}      \setlength{\parsep}{3pt}
+      \setlength{\topsep}{3pt}       \setlength{\partopsep}{0pt}
+      \setlength{\leftmargin}{1.5em} \setlength{\labelwidth}{1em}
+      \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishlistB}{
+   \begin{list}{--}
+    { \setlength{\itemsep}{0pt}      \setlength{\parsep}{3pt}
+      \setlength{\topsep}{3pt}       \setlength{\partopsep}{0pt}
+      \setlength{\leftmargin}{1.5em} \setlength{\labelwidth}{1em}
+      \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishend}{
+    \end{list}  }
+
+\begin{document}
+
+\begin{center}
+\noindent\includegraphics[height=1.8cm] {RegisU_Logo.png}\\
+\vspace{-0.5cm}
+{\bf{General Physics with Calculus Laboratory I}} \\ 
+{\bf{PH 305A (1 semester hour; Fall 2019)}} \\
+{{Section RU01: Thursday, 8:10 - 10:50 a.m., Pomponio Family Science Center, room 130}} \\
+{{Section RU02: Thursday, 11:10 a.m.-1:50 p.m., Pomponio Family Science Center, room 130}} 
+\end{center}
+
+\section{Overview}
+
+The primary goal for this course is for you to build conceptual intuition 
+about force, momentum, and energy, the ideas that physicists use to 
+describe motion.  In addition, you should learn to solve problems by 
+designing and carrying out relevant experiments -- in other words, to put the 
+scientific method into practice.  You will also start to learn how to 
+build computational models that you can use to understand more complex
+physical systems.  You will document the results of your experiments in 
+writing, and you will give an oral presentation of the results of a
+computational modeling project.
+
+\section{Course Description} 
+
+Complements PH 304A, providing practical, hands-on experience primarily with experiments related to mechanics.
+
+\section{Pre/Co-Requisites}
+
+Co-requisite: PH 304A (General Physics with Calculus I), which in turn lists MT 360A (Calculus I) as a co-requisite.
+
+\section{Instructor}
+\squishlist
+\item Evan Tilton, Ph.D. (Feel free to call me Evan, Prof. Tilton, Dr. Evan, Hey-You... whatever you're comfortable with. I use he/him/his pronouns.)
+\item Office: Carroll 108C
+\item Office hours: TBD
+\item  Email: \url{etilton@regis.edu}.  This is generally the best way to contact me.
+\item Phone: 3034584166 (unreliable)
+\squishend
+
+\section{Student Learning Outcomes}
+
+In this lab, you should learn to:
+\squishlist
+\item Describe pheonmena you observe in the real world in terms of physics concepts.
+\item Solve problems by designing and carrying out relevant experiments, putting the scientific method into practice.
+\item Model and visualize the behavior of physical systems by writing computational simulations.
+\item Apply basic data analysis and statistics skills.
+\item Communicate the results of experiments and simulations.
+\squishend
+This course is aligned with the following departmental learning outcomes:
+\squishlist
+\item Knowledge of the fundamental principles of analytical mechanics, special relativity, electricity and magnetism, quantum mechanics, and statistical mechanics.
+\item Ability to apply the principles of physics to solve qualitative and quantitative problems using both analytical and computational methods.
+\item Ability to design and conduct experiments.
+\item Ability to communicate effectively, both orally and in writing.
+\squishend
+...and is mapped to these University-level institutional learning outcomes:
+\squishlist
+\item Knowledge of a discipline or content area.
+\item Knowledge of arts, sciences, and humanities.
+\item Ability to think critically.
+\item Ability to communicate effectively.
+\item Ability to use contemporary technology.
+\squishend
+
+\section{Presence and absence}
+
+In general, you are expected to attend every lab, arriving on time and prepared to stay for the entire scheduled period.
+If you are unavoidably absent because of illness, a significant family emergency, or participation in University-sponsored
+events such as intercollegiate athletics, you will be able to negotiate a mutually convenient time with the instructor to make up 
+the lab.  Make-up labs in other circumstances are entirely at the discretion of the instructor.  If you were not present to
+complete a lab experiment, you will not have the data needed to complete the weekly report.
+
+\section{Weekly reports}
+
+I will ask you to write a {\em short} report on each week's experiment and 
+submit it to a dropbox on \url{{http://worldclass.regis.edu}},
+normally by the end of the day on the following Monday.
+These weekly reports should always contain the following elements:
+\squishlist
+\item Summary: explain what you did in the lab in one compact paragraph.
+\item Data and results: include tables and graphs that show everything 
+  that you directly measured and all important quantities that you calculated,
+  accompanied by enough written text to explain the meaning of each of the 
+  values.  You should always state the units for each number, and each axis 
+  of a graph should be labeled with a description of the quantity plotted on 
+  it as well as its units.
+\item Conclusions: what are your data and results telling you about the world?
+  ``I learned a lot about electrons'' is not an appropriate scientific conclusion.  
+  Instead, write something more like ``The charge of the electron was measured to be $1.48 \times 10^{-19}$~C, which agrees to within 7.5\% with the accepted value of $1.60 \times 10^{-19}$~C.''
+\squishend
+
+Each experiment will also identify specific questions for you to consider.  
+If a sentence in the lab handout ends with a question mark, it's a question!
+Please make sure that you include your answers to these questions in your 
+report, and that you write them in a way that would be understood by a reader 
+who only has your report and not the lab handout with the questions.
+Do not simply write the answers without context.
+
+Please note that, in these weekly reports, I am generally {\em not} asking you 
+to document all of the details of the experimental procedure, as you may
+have done in other laboratory classes.  Instead, I hope that you will spend 
+your time thinking carefully about the purpose of the experiment and the 
+interpretation of the data that you collected.
+
+\section{Computational activities}
+
+Computational models are often used to solve problems that are too
+complicated to study with pencil-and-paper analytical calculations.
+As the problems at the forefront of physics have become more complex,
+and as computers have become more powerful, computational techniques have
+become more important.
+
+There will be three in-class computational activities that will allow you
+to learn simple programming and computational modeling techniques in the 
+VPython environment.  These activities are derived from tutorials distributed
+by Ruth Chabay and Bruce Sherwood, authors of the {\em{Matter and Interactions}}
+textbook.  You will only have to document completion of these activities
+by uploading the final program to a dropbox on \url{{http://worldclass.regis.edu}}.
+
+I will then assign your group a computational modeling problem; each 
+group in a section will work on something different.  These problems 
+will ask you to write a VPython program that simulates a physical system,
+and to use the program to determine the answer to a scientific question.
+You will then present your results to the class in a conference-style
+session planned for November 16.
+In your presentation, you will need to introduce the problem, outline the
+structure of your program, demonstrate it (it will produce
+an animation that will be interesting to watch), and explain the conclusions
+that you can draw from experimenting with the program and observing the output.
+You will need to prepare visual slides to accompany your presentation.
+
+\section{Experimental Project}
+
+In the first part of the course, you will become familiar with the equipment
+that is available in the lab and with some data collection and analysis
+techniques.  At the end, I will ask you to design an experiment that uses
+that equipment and those skills to address a physics question that 
+interests you.  By November 16, you should have a good idea of your topic
+and the general outline of the experimental procedure, and I will ask you to 
+put those ideas into writing by that day.  You can then use the last two lab 
+periods as work time to refine the procedure and to collect and analyze
+your data.  
+
+For this independent project, you will produce a final laboratory report 
+that will be much more complete and more formal than your weekly reports.
+The format of this report will be modeled on a published journal article, 
+so it will include an abstract, an introduction that explains the scientific 
+context, a detailed description of the procedure, data and results that are 
+distilled into appropriate graphs and tables, and a scientific conclusion.
+I will plan to meet with each of you to review a draft of the report before
+you submit a revised version by the end of the final examination week.
+
+\section{Grades}
+\noindent The work in the course will be weighted as follows to determine
+your final grade {\em (Please customize to taste...)}:
+\squishlist
+\item Weekly laboratory reports: 50\%
+\item Computational tutorial activities: 15\%
+\item Computational project: 15\%
+\item Experimental project: 20\%
+\squishend
+
+Each of these assignments will be evaluated using the following rubrics:
+{\em (Please fill in rubrics that you plan to use...)}
+
+
+\section{Late work}
+
+In general, I subscribe to the philosophy that we all need deadlines to
+keep us on track, but that ``late is better than never.''  
+Accordingly...{\em fill in a policy here...}
+
+\section{Collaboration expected}
+You are expected to work as part of a laboratory group to perform the 
+experiments and gather your data.  This data should be shared with all
+members of the group.  You may collaborate with your group to produce 
+graphs or other figures that represent your data, which may appear in each of 
+your reports.  You are also expected to work together to develop the programs
+that implement your computational models.
+However, each member of the group must write the text of the 
+report independently. 
+
+\section{Academic Honor Code}
+All members of the Regis University community exhibit the qualities of honesty, loyalty and trustworthiness in all academic activities, holding themselves and each other accountable for the integrity of the learning community. Regis University students are committed to the highest standards of academic integrity and assume full and complete responsibility for maintaining those standards in the academic environment.
+
+\section{Academic Integrity Violations}
+
+Violations of academic integrity are taken very seriously and include cheating, plagiarism, fabrication, collusion and other forms of academic misconduct.  All violations will be reported with appropriate sanctions applied.  Sanctions can include, but are not limited to failure of an assignment, failure of a course, removal of academic honors, or review of the Academic Integrity Tutorial.  For more serious violations, program suspension, College dismissal or University expulsion may be imposed.  Refer to the Regis College Office of the Academic Dean for further information.  This Academic Honor Code applies to any student enrolled in a course at Regis University or one of its university partners, regardless of the student's home college or program, and will be enforced according to the policies and procedures outlined in the University Academic Integrity Policy.  For the full policy, please see \url{https://www.regis.edu/About-Regis-University/Policies-and-Procedures/Academic-Integrity-Policies.aspx}.
+
+It is the responsibility of each student to review all aspects of the course syllabus and agree to adhere to the Academic Honor Code.  In doing so, the student acknowledges that the work represented in all examinations and other assignments is his or her own and that he or she has neither given nor received unauthorized information.  Furthermore, the student agrees not to divulge the contents of any examination or assignment to another student in this or ensuing semesters.  
+
+
+I hope that there will be no need to respond to any academic integrity
+violations in this course.  However, any response would be consistent with the
+classifications of Level I, II, and III violations in the Regis University
+Academic Integrity Policy.  In general, the typical penalty for misconduct
+such as plagiarism in a laboratory report would be a grade of 0 on that report.
+Egregious violations such as deliberate fabrication or falsification of data 
+could lead to an F in the course.
+
+\section{Key dates}
+\squishlist
+\item The add/drop deadline (with no record on your transcript) is September 4, 2018.
+\item The deadline to withdraw (with a grade of ``W'') is November 11, 2018.  
+\item Midterm grades will be submitted by noon on October 18, 2018.
+\squishend
+
+\section{Counseling}
+
+During the semester, if you find that life stressors are interfering with your academic or personal success, consider contacting the Office of Counseling and Personal Development (OCPD). All full-time Regis College students are eligible for counseling services at no charge. OCPD is located in the Life Direction Center, Room 114 and can be contacted by phone 24/7 at 303-458-3507. For more information, see {\url{http://www.regis.edu/ocpd}} .
+
+\section{Accessibility}
+
+Regis is committed to creating a learning environment that is equitable, inclusive and welcoming. If you have a disability (or think you may have a disability) that may affect your work in this class and feel you need accommodations, contact Student Disability Services and University Testing (SDS/UT) to schedule an appointment and initiate a conversation about reasonable accommodations. To receive any academic accommodation, you must be registered with SDS/UT, which works with students and faculty to identify reasonable accommodations.  SDS/UT  can be reached in Clarke Hall, suite 241, by phone at (303)458-4941,  or by email at \url{disability@regis.edu}. For more information, please visit the SDS/UT's website (\url{https://www.regis.edu/Academics/SDS-UT/Disability-Services/New-Students.aspx}) 
+at \url{http://www.regis.edu/disability}. 
+
+
+\section{Diversity and Inclusion}
+At Regis University the term ``diversity'' affirms our Jesuit commitment to build a community of excellence that values inclusion, dignity and the contributions of all our members. 
+
+We strive to:
+\squishlist
+\item Shape a learning environment characterized by the Jesuit traditions of mutual respect and the pursuit of social justice.
+\item Contribute to the richness and vitality of our global Regis community by recognizing our various identities and experiences including, but not limited to, age, gender, race/ethnicity, class, disability, sexual orientation, religion and other forms of human difference.
+\item Fulfill our Jesuit Catholic mission through each member of our community by maintaining a humane atmosphere where the human rights of every individual are recognized and respected through words and actions.
+\squishend
+Should an individual ever feel as though these values are not being upheld in the academic or residential environment, we encourage that person to contact the Office of Diversity, Equity and Inclusive Excellence, LDC 124, \url{diverse@regis.edu}, 303-458-5301. 
+
+\section{Title IX and Regis's Nondiscrimination and Sexual Misconduct Policy}
+
+In the event that you choose to write or speak about having survived sexualized violence, including rape, sexual assault, dating violence, domestic violence, or stalking {\em and specify that this violence occurred while you were a Regis student}, federal and state education laws require that instructors notify the Regis University Title IX Coordinator, Michelle Spradling. She will contact you to let you know about accommodations and support services at Regis and requirements for holding accountable the person who harmed you. To learn more about Title IX, explicitly at Regis, go to \url{http://www.regis.edu/About-Regis-University/University-Offices-and-Services/Campus-Safety/Title-IX.aspx} .
+
+If you do not want the Title IX Coordinator notified, instead of disclosing this information to your instructor, you can speak {\bf confidentially} with counselors in the Office of Counseling and Personal Development (see below) and the Blue Bench, a community agency that focuses on sexual assault and sponsors a 24/7 hotline. They can connect you with support services and discuss options for holding the perpetrator accountable.  The number is 303-322-7273.
+
+\newpage
+
+\section{Course schedule}
+
+This schedule of experiments and activities is subject to change as needed; 
+in particular, it may be necessary to restructure them to keep the laboratory
+in reasonable synchronization with the lecture course (PH 304A).
+Consequently, the lab handouts will need to be posted on WorldClass
+each week on a ``just-in-time'' basis, typically on the Tuesday that precedes 
+the lab session.  Please do print out and read the handout before you
+come to lab.
+
+\medskip
+
+\begin{center}
+%{\small{
+\begin{tabular}{|l|l|}
+\hline
+Date & Lab topic  \\
+\hline
+8/30 & Lab 1: Understanding vectors \\
+     & Computational activity 1: Simulating motion at constant velocity \\
+\hline
+9/6 & {\em Mass of the Holy Spirit; section RU02 meets at 12:30 p.m.} \\
+     & Computational activity 2: Motion with a constant net force \\
+\hline
+9/13 & Lab 2: Force table \\
+\hline
+9/20 & Lab 3: Impulse and momentum change in 1-D \\
+\hline
+9/27 & Lab 4: Energy in Springs \\
+\hline
+10/4 & Lab 5: Moments of Inertia \\
+\hline
+10/11 & Lab 6: Coin Collisions \\
+\hline
+10/18 & Computational activity 3: Simple harmonic oscillations \\
+ & Lab 7: Friction \\
+\hline
+10/25 & Lab 8: Friction in Circular Motion \\
+\hline
+11/1 & Lab 9: Circular motion \\
+\hline
+11/8 & Lab 10: Air resistance \\
+ & Computational project work time \\
+\hline
+11/15 & Lab 11: Video analysis \\
+ & Computational project work time \\
+ & {\textbf {Proposal for experimental project due}} \\
+\hline
+11/22 & {\em No lab; Thanksgiving holiday} \\
+\hline
+11/29 & {\textbf {Computational project presentations}} \\
+& Experimental project work time \\
+\hline
+12/6 & Experimental project work time \\
+\hline
+12/10-13 & {\em{Finals week: individual appointments to review draft report}} \\
+12/14 & {\textbf{Final report on experimental project due}} \\
+\hline
+\end{tabular}
+%}}
+\end{center}
+
+\end{document}
