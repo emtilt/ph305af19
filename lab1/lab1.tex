@@ -22,9 +22,18 @@
 {\bf{Lab 1: Computational Tools}} \\
 \medskip
 \end{center}
+
+This lab is a quick intro to some computational tools that we'll be using this semester. It's just some exercises to help you get a bit more confident with spreadsheets and Python so that they aren't obstacles when we start doing real physics experiments. Everyone should work on their own computer for these exercises (if possible), so that everyone completes these individually. However, you are welcome to discuss with your peers to get help. If there aren't enough functioning computers for everyone, try to ensure that everyone understands each step before moving on. In general, if you don't feel confident about this stuff, that probably means that you're the best candidate to be at the keyboard, because the goal for today is \textit{get} confident!
+
 \begin{center}
 {\bf{Part A -- Spreadsheet Basics}} 
 \end{center}
+
+Sometimes in lab you'll want to quickly organize or plot data in a spreadsheet (most commonly, Microsoft Excel, Google Sheets, or LibreOffice Calc -- all are roughly equivalent). Some of you already have lots of skills in these programs; others of you may never have significantly used them. If you haven't, don't worry, they're pretty easy! These are some basic exercises to teach you just a few crucial skills (there are far more things you can do in a spreadsheet than what is represented here). 
+
+Start whichever spreadsheet program you have access to. Open a new, blank spreadsheet. Enter the number ``1'' in cell A1 and ``2'' in cell A2. You can enter a value by clicking on the cell and typing.
+
+Now we want 
 
 \medskip
 
@@ -60,7 +69,7 @@ Each video ends with a ``challenge'' to you.  Attempt each of these challenges b
 \noindent Then, please read this program:
 {\small{
 \begin{verbatim}
-from visual import *
+from vpython import *
 
 offset = vector(0,-3,0)
 position_now = vector(0,0,0)
@@ -79,7 +88,7 @@ why it did something different?
 \noindent Next, please do the same with the following program:
 {\small{
 \begin{verbatim}
-from visual import *
+from vpython import *
 
 ball = sphere(pos=vector(-5,0,0), radius=0.5, color=color.green)
 block = box(pos=vector(-8,0,0), color=color.yellow)
@@ -105,7 +114,7 @@ $\vec{r}_f = [10, 0, 0]$~m?
 
 {\small{
 \begin{verbatim}
-from visual import *
+from vpython import *
 
 wall = box(pos=vector(0,4,-0.5), length=20, height=10, width=0.1, color=color.green)
 particle = sphere(pos=vector(-10,0,0), radius = 0.5, color=color.magenta)
