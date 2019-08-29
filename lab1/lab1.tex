@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[10pt]{article}
 
 \newcommand{\squishlist}{
    \begin{list}{$\bullet$}
@@ -29,17 +29,68 @@ This lab is a quick intro to some computational tools that we'll be using this s
 {\bf{Part A -- Spreadsheet Basics}} 
 \end{center}
 
-Sometimes in lab you'll want to quickly organize or plot data in a spreadsheet (most commonly, Microsoft Excel, Google Sheets, or LibreOffice Calc -- all are roughly equivalent). Some of you already have lots of skills in these programs; others of you may never have significantly used them. If you haven't, don't worry, they're pretty easy! These are some basic exercises to teach you just a few crucial skills (there are far more things you can do in a spreadsheet than what is represented here). 
+Sometimes in lab you'll want to quickly organize or plot data in a spreadsheet (most commonly, Microsoft Excel, Google Sheets, or LibreOffice Calc -- all are roughly equivalent). Some of you already have lots of skills in these programs; others of you may never have significantly used them. If you haven't, don't worry, they're pretty easy! These are some basic exercises to teach you just a few crucial skills (there are far more things you can do in a spreadsheet than what is represented here). Go through these steps, making sure you understand how to use them.
 
-Start whichever spreadsheet program you have access to. Open a new, blank spreadsheet. Enter the number ``1'' in cell A1 and ``2'' in cell A2. You can enter a value by clicking on the cell and typing.
+\begin{enumerate}
+\item Start whichever spreadsheet program you have access to. Open a new, blank spreadsheet. Enter the number ``1'' in cell A1 and ``2'' in cell A2. You can enter a value by clicking on the cell and typing.
+\item For this step, you should \textbf{not} type any more numbers. We want to continue this column of numbers, so that cell A3 contains the number ``3'', and so on, up to cell A30, which should contain the number ``30''. It would be tedious to type all of these numbers by hand; luckily, you can create them automatically in a spreadsheet. Click on cell A1 (containing the number ``1'') and hold the mouse button down while you drag down to also highlight cell A2. Both should be highlighted now. At the bottom right corner of this two-cell selection, there is a small square. Click on it and hold the mouse button down while you drag the small square downward until the border encompasses all cells from A1 to A30. Release the mouse button, and the cells should be filled as we desired.
+\item Let's think of the A column as an $x$ variable, and let's try to fill the B column with $x^2$ values (e.g., 1, 4, 9, 16, etc.). Select cell B1. To begin typing a formula, press the = button. Once you have entered the = sign, and the typing cursor is still blinking inside cell B1, click once on cell A1. The formula insde cell B1 should now read \texttt{=A1}. However, we want to \textit{square} the value from A1, so continue typing the forumla until it reads \texttt{=A1\textasciicircum2} and then press enter. You should see that the cell now contains the value 1 as expected. Be sure you understand what you did in this step before moving on!
+\item Select the newly-filled cell B1. Click the small square in the bottom right of the selection, and drag down to cell B30. You should now see all of the $x^2$ values corresponding to the values for $x$ in column A. Notice how easy it is to apply a formula to a huge number of values!
+\item Let's plot these values. Select \textit{all} of the filled cells in both columns by clicking and dragging. Click on ``Insert'' near the top of the window. Find the correct button to insert a line chart. You should now see part of a parabola, curving upwards. Ensure you understand how to select data and plot it before moving on.
+\item Explore your spreadsheet program, or ask another student how, until you figure out how to fit a straight line to your plot (it'll be a pretty terrible fit, since you are fitting a line to a parabola!).
+\end{enumerate}
+These are the extreme basics of spreadsheets. You can create most types of formulas and most types of plots. You should \textbf{never} be calculating lots of things by hand in lab, and you should \textbf{never} be repeatedly typing formulas in a spreadsheet. \textbf{Always} find a way to do the tasks mostly automatically using appropriate computing features -- if you don't know how, ask!
 
-Now we want 
+Do not move on to Part B or discard this spreadsheet until I check that you have completed it.
 
-\medskip
+\newpage
 
 \begin{center}
 {\bf{Part B -- Computational Physics Activity 1: The Basics of A Python Computer Program}} 
 \end{center}
+
+In this course, you will sometimes need to complete tasks in the Python programming language. Python is an extremely powerful, common, and easy to use programming language. I use it for all of my data analysis for my research, and it is used by nearly every major company. It's also used by artists, sports teams, musicians, medical professionals, and nearly every other type of profession. You can use it to study black holes, control a robot, make interactive art, or even just automate basic daily tasks. So it's worth knowing a little bit of it. It's also very useful for physics.
+
+As we go through Parts B and C of this lab, feel free to try things and experiment. You can't break anything -- we can always reset Python. A big part of programming is tinkering and trying things (and, of course, getting things wrong a whole bunch of times as a result!). I definitely see more error messages than successes when I work on Python code for my research; that's just part of figuring out how to program things!
+
+You can run Python natively on your computer, but most of you probably don't have it installed, so we'll use a website that runs your code online for you. Go to \url{https://trinket.io/python3/01d155eeac}.
+
+You should see a window with two sections. On the lefthand side is where you write your Python code. On the righthand side, the output from your code will be displayed.
+
+Let's start with the basics. It is a very dumb, very old tradition to make your first program in a new language be one that simply prints the phrase, ``Hello World!'' to the screen. Try doing this in Python by typing \texttt{print("Hello World!")} in the left window. Click the play button at the top to run it; you should see Python print that phrase. How did work? Basically, \texttt{print()} is a built-in command in Python. It displays whatever is inside the parentheses on the screen. The quotation marks tell it to print the exact characters to the screen, rather than trying to do simplifying math on whatever you've typed.
+
+See how it works differently without the quotes. Try replacing your command the two lines of code  below (at the same time, one line after the other):
+\begin{verbatim}
+print("2+3")
+print(2+3)
+\end{verbatim}
+Run the code. What has happened? What have the two commands done differently?
+
+Notice that Python runs your commands in order, from top to bottom. This is a fundamental idea in programming, so keep it in mind -- it determines how you should structure your code.
+
+We've discovered that we can print things to the screen and do arithmetic in Python. Sometimes we want to do more complex calculations. Python can use \textit{variables}, much like algebraic variables. Variables store information. For examples, try running the following code:
+\begin{verbatim}
+a=12
+print(a)
+\end{verbatim}
+First we store the value in the variable \texttt{a}, then, when we print that variable, Python prints the information we stored. We can likewise do math with variables. Try running this code:
+\begin{verbatim}
+# words after a # symbol are comments, python ignores them 
+a=12
+b=4**2 # the ** operator is Python's command for exponents
+cow=a+b
+print(cow)
+\end{verbatim}
+Explain what this code has done in plain English.
+
+When we do calculations, we might want to use more complex mathematical functions. Python lets you \textit{import} more complicated, premade commads to help you with many tasks. (This is part of why Python is so useful: people have created commands that let you do all sorts of things with almost no effort.) Suppose that we want to take the square root of a number. The \texttt{math} contains all the basic math functions. At the beginning of our code, we need to import it. Try this:
+\begin{verbatim}
+from math import *
+print(sqrt(4))
+\end{verbatim}
+The first line basically says, ``from the math module, import everything,'' and one of the command in that module is \texttt{sqrt()}. Once we import it, we can use it.
+
+To conclude this part of the lab, write a set of code that stores the number 55 in a variable called \texttt{regis}. In the next \textbf{single} line of code,  subtract 3  from \texttt{regis}, then cube that result, and then take the square root, and store that result in a variable \texttt{lacksinternet}. On the next line, print \texttt{lacksinternet}. Python should display a value of approximately 374.977. (Hint: You can use parentheses to control order of operations.) Show your working code to me before moving on.
 
 \medskip 
 
@@ -53,16 +104,16 @@ Now we want
 
 So far we've talked about tools for doing basic mathematical calculations and analyzing experimental data, but computers have an additional use in physics: solving physics problems by simulating them numerically. In this course, we will use a Python module called VPython which is designed to make simulating physics with 3D graphics very easy to program.
 
-Unfortunately, the Python environment on Colab doesn't support the 3D graphics of VPython, so we'll have to use a different environment (no big deal -- that's the point of different Python environments, to let you use the tools appropriate to the problem you want to tackle). The easiest way to run VPython for the purposes of this lab is in a browser at {\url http://www.glowscript.org/}.\footnote{It is also possible to run VPython locally on a computer without using the internet. On the lab laptops, you can do so by running the VIdle environment, found in the Start menu under Physics, but because they have an older version installed, you must import from \texttt{visual} rather than \texttt{vpython}. If you're feeling \textit{really} adventurous and would like to install VPython on your own laptop, it is a slightly complicated process, with several options described at \url{https://vpython.org/}.} However, there is one difference when running VPython on Glowscript compared to using more ordinary Python environments: the first line of the program must tell Glowscript what kind of code you'll be running, so in our case the first line should be \texttt{GlowScript 2.8 VPython}. When you create a new program on Glowscript, this line should be automatically added.
+VPython needs to run in a slightly different environment than the regular Python. The easiest way to run VPython for the purposes of this lab is in a browser at {\url http//www.glowscript.org}.\footnote{It is also possible to run VPython locally on a computer without using the internet. On the lab laptops, you can do so by running the VIdle environment, found in the Start menu under Physics, but because they have an older version installed, you must import from \texttt{visual} rather than \texttt{vpython}. If you're feeling \textit{really} adventurous and would like to install VPython on your own laptop, it is a slightly complicated process, with several options described at \url{https://vpython.org/}. Alternately, if you want to run it online in a browser but hate the \url{glowscript.org} website, you can run it at \url{https://trinket.io/glowscript/c13fe6820a}} However, there is one difference when running VPython on Glowscript compared to using more ordinary Python environments: the first line of the program must tell Glowscript what kind of code you'll be running, so in our case the first line should be \texttt{GlowScript 2.8 VPython}. When you create a new program on Glowscript, this line should be automatically added.
 
 Please start by watching these three short videos (between 3 and 4 minutes 
-  each):
+  each; if you have your own headphones, please use them!). Note that because we are running our code online, you will not need to save the file or anything like that; simply type your code and run it:
 \squishlist
 \item {\url http://vpython.org/video01.html}
 \item {\url http://vpython.org/video02.html}
 \item {\url http://vpython.org/video03.html}
 \squishend
-Each video ends with a ``challenge'' to you.  Attempt each of these challenges before starting into the next video -- don't move on until you get it working!  
+Each video ends with a ``challenge'' to you.  Attempt \textbf{each} of these challenges before starting into the next video -- \textbf{don't move on until you get it working! }
 
 \medskip
 
