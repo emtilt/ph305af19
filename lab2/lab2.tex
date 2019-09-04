@@ -1,0 +1,199 @@
+\documentclass[11pt]{article}
+
+\newcommand{\squishlist}{
+   \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}      \setlength{\parsep}{3pt}
+      \setlength{\topsep}{3pt}       \setlength{\partopsep}{0pt}
+      \setlength{\leftmargin}{1.5em} \setlength{\labelwidth}{1em}
+      \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishend}{
+    \end{list}  }
+
+\usepackage{times}
+\usepackage{mathptm}
+\usepackage{fullpage}
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{center}
+{\bf{Regis University -- Physics 305A -- Fall 2019}} \\
+{\bf{Lab 2: Understanding Vectors}} \\
+\medskip
+\end{center}
+
+\medskip 
+
+\noindent Our goal for today is to become very comfortable interpreting and manipulating vectors, both mathematically and graphically. You'll make measurements with some large-scale table-sized graph paper in this lab.  It is laminated, so you can draw on it with dry-erase markers as needed.
+
+Like our first lab, this lab does not really have any ``data'' to collect and interpret. However, I do ask that you submit a lab report for this lab. Try to think of this (somewhat unconventional) report as a summary of techniques for yourself; illustrate how you solved each problem with words, sketches, and/or math. You may do so in whatever format is convenient, but be clear enough that future-you and present-me can fully understand 
+
+\begin{enumerate}
+\item First, please choose an origin for the coordinate system, and draw a set 
+of $x$ and $y$ coordinate axes on it with a dry-erase marker.  For today, all 
+of our vectors will have a $z$ component equal to 0.
+
+\item Throw a bolt (object 1) at one quadrant of your coordinate system and a 
+nut (object 2) at a different quadrant. For simplicity, move 
+them to the closest grid points to where they land on the paper.
+
+\item Draw a {\textbf {vector}} (an arrow) from the origin to object 1.  
+  Label it as $\vec{r}_1$.  Notice that this symbol has an arrow drawn 
+  over it, which is your indication that it is a vector.
+
+\item Draw a vector from the origin to object 2 and label it as $\vec{r}_2$.
+
+\item Measure the $x$ and $y$ {\textbf{components}} of  
+  the vectors $\vec{r}_1$ and  $\vec{r}_2$ by counting squares from the tail 
+  of the arrow to the tip.  If you put the objects in two different quadrants 
+  of the coordinate system, at least one of these components must be negative, 
+  and at least one must be positive.  Please remember to record the units
+  with the values that you measure.
+  When you record the values of these components, you can give them the 
+  names $r_{1x}$, $r_{1y}$, $r_{2x}$, and $r_{2y}$.  Notice that the names
+  of the components do {\em not} have arrows drawn over them; they are
+  just numbers.
+
+\item Use a ruler to measure the graph paper to determine the conversion factor
+   between units of ``squares'' and units of ``cm.''
+
+\item Convert the values you measured for  $r_{1x}$, $r_{1y}$, $r_{2x}$, 
+  and $r_{2y}$ into units of cm.
+
+\item Now, write  $\vec{r}_1$ and $\vec{r}_2$ as three-component vectors.  
+   (For example, if 
+   you measured $r_{1x} = 1$~square, $r_{1y} = 2$~squares, and a conversion
+   factor of 3.2 cm/square, you 
+   might write ``$\vec{r}_1 = [ 3.2, 6.4, 0 ]$~cm.'')
+
+\item Calculate the difference  $\Delta\vec{r} = \vec{r}_2 - \vec{r}_1$
+  by subtracting one component at a time.   (For example, 
+  $[ 9.6, 3.2, 0 ]$~cm $-$ $[ 3.2, 6.4, 0 ]$~cm = $[ 6.4, -3.2, 0 ]$~cm.)
+
+\item Find a place to draw  $\Delta\vec{r}$ on your coordinate system 
+  in a way that forms a closed triangle with $\vec{r}_1$ and $\vec{r}_2$.
+  It does {\em not} need to have one end at the origin of the coordinate 
+  system.  Carefully describe the physical meaning of $\Delta\vec{r}$
+  in terms of the bolt and the nut (objects 1 and 2)?
+
+\item The {\textbf{magnitude}} of ${\vec{r}_1}$ is defined by 
+ $r_1 = \left| \vec{r}_1 \right| = \sqrt{r_{1x}^2 + r_{1y}^2 + r_{1z}^2}$.  Notice that 
+ you can indicate the operation of computing the magnitude just by dropping 
+ the arrow from above the name of the vector; that's one reason to be very 
+ careful to draw the arrow there when it is needed, and only when it is needed.
+ Calculate the magnitudes  $r_1 = \left| \vec{r}_1 \right| $, $r_2 = \left| \vec{r}_2 \right|$,
+ and $\left| \Delta {\vec r} \right|$.
+
+\item Use a ruler (or meter stick) to measure the lengths of the three arrows 
+  on your graph paper.  How well do these distances agree with the magnitudes 
+  that you calculated?  (They should agree pretty well.)
+
+\item Draw a vertical line from the tip of ${\vec{r}_1}$ to the $x$ axis, 
+  and draw a horizontal line from the tip of  ${\vec{r}_1}$ to the $y$ axis.
+  You should be able to find a right triangle that will let you use 
+  trigonometry that you know (think ``SOH-CAH-TOA'') to calculate the angle
+  that  ${\vec{r}_1}$ makes with the $x$ axis, and another right triangle
+  to find the angle that it makes with the $y$ axis.  Do this for both
+  ${\vec{r}_1}$ and ${\vec{r}_2}$.
+
+\item Use a protractor to measure the angles that ${\vec{r}_1}$ 
+  and ${\vec{r}_2}$ make with the $x$ and $y$ axes.  How well do these
+  angles agree with your calculations?  (They should agree pretty well.)
+
+\item Apply the same calculation technique to find the 
+  angle that $\Delta {\vec r}$ makes with the $x$ and $y$ coordinate
+  axes.   Then, to measure the angles with the protractor, you can think 
+  of ``sliding'' a copy of $\Delta {\vec r}$ so that its tail is at the 
+  origin, or you can think of ``sliding'' the coordinate axes over so that the 
+  origin is at the tail of $\Delta {\vec r}$.  Again, how well do your
+  calculated and measured angles agree?
+
+\item Leaving the bolt and the nut where they are, erase all of the marks
+  that you have drawn on the paper.  Draw a new set of coordinate axes
+  that are offset by a few squares in each direction from where they used 
+  to be.  As you did before, find the vectors ${\vec{r}_1}$ and ${\vec{r}_2}$ 
+  in this new coordinate system; they should have different values
+  than they did before. 
+
+\item Now, subtract to find $\Delta {\vec r}$ using the values you measured
+  in the new coordinate system.  Can you explain how your result supports the 
+  general rule that well-defined vectors are independent of the choice of the 
+  origin of the coordinate system?  This is the idea that allows you to
+  draw vectors with their tails at any point, not only at the origin.
+
+\end{enumerate}
+
+
+
+
+
+
+
+\newpage
+
+\begin{center}
+\medskip
+{\bf{Computational Activity 1: Redux}} 
+\end{center}
+\medskip
+\textbf{Only if you have extra time after completing the rest of this lab:} The questions below are the final two activities from our first lab last week, which many people did not complete due to various tachnical difficulties. If you did not have time to complete the activities below during that lab, please give them a try now. You don't need to turn in anything additional for these, and will not be further evaluated on your work on them, but making sure that you've worked through them will help you in future labs. As before, code can be run at \url{http://www.glowscript.org}. Feel free to chat with me and others when you feel stuck! Talking through it helps!
+
+
+
+
+Read the following program. Make a prediction of what the program will do, and write down that prediction 
+before you run it. 
+{\small{
+\begin{verbatim}
+from vpython import *
+
+ball = sphere(pos=vector(-5,0,0), radius=0.5, color=color.green)
+block = box(pos=vector(-8,0,0), color=color.yellow)
+velocity = vector(0.4, 0.6, 0)
+delta_t = 0.1
+t = 0
+
+while t < 12:
+  rate(100)
+  ball.pos = ball.pos + velocity * delta_t
+  t = t + delta_t
+\end{verbatim}
+}}
+\noindent Again, make a prediction, check it by running the program, and explain
+any discrepancy.
+
+Finally, here is the beginning of a program, which you can add on to.
+Currently, it draws a magenta sphere just in front of a green wall.
+The sphere (named ``particle'') starts at $\vec{r}_i = [-10, 0, 0]$~m.  
+A velocity vector is defined so that $\vec{v} = [0.5, 0, 0]$~m/s.
+Make a prediction; how long should it take for the sphere to go to
+$\vec{r}_f = [10, 0, 0]$~m?
+
+{\small{
+\begin{verbatim}
+from vpython import *
+
+wall = box(pos=vector(0,4,-0.5), length=20, height=10, width=0.1, color=color.green)
+particle = sphere(pos=vector(-10,0,0), radius = 0.5, color=color.magenta)
+velocity = vector(0.5,0,0)
+delta_t = 0.1
+t = 0
+\end{verbatim}
+}}
+Starting with this program, add a {\texttt {while}} loop that moves the ``particle''  
+along the wall, from the left side to the right side.  Have it stop when it 
+gets to the right side; you can refer to the $x$ component of the vector that 
+represents the ball's position as {\texttt {particle.pos.x}} in the loop's 
+condition expression. 
+
+Have your program print out the elapsed time after the completion of the
+loop.  How long did it take?  Does this match your prediction?
+
+So, congratulations!  You have just written a computer program to solve
+a physics problem by simulating it numerically.  This is a powerful technique 
+that is frequently used by scientists to model systems that are too 
+complicated to understand with pencil-and-paper calculations alone.
+
+
+\end{document}
