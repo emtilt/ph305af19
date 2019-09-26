@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[10pt]{article}
 
 \newcommand{\squishlist}{
    \begin{list}{$\bullet$}
@@ -13,88 +13,74 @@
 \usepackage{times}
 \usepackage{mathptm}
 \usepackage{fullpage}
-
+\usepackage{url}
 \begin{document}
 
-\begin{center}
-{\bf{Regis College Physics 205A, Fall 2008}} \\
+\begin{center}\vspace{-15ex}
+{\bf{Regis College Physics 205A, Fall 2019}} \\
 {\bf{Lab 5: Conservation of Momentum by Video Analysis}} \\
 \end{center}
 
 In this lab, you will experimentally test the ideas that we have discussed
-about conservation of momentum and energy in collisions.
-
-We will use a set of battery-operated ``hover pucks'' that direct a stream 
+about conservation of momentum in collisions. We will use a set of battery-operated ``hover pucks'' that direct a stream 
 of air downward
 so that they can move with little friction on a smooth surface.  (The effect
 is similar to an air hockey table, but the air source is in the puck
-rather than in the table.)  Each group will also use a Canon PowerShot A560 
-digital camera, which has an excellent movie mode, offering a choice of 
-30 frames per second at 640$\times$480 resolution or 60 frames per second at 
-320$\times$240 resolution.
+rather than in the table.)  Each group will use a cell phone camera to record video, which you will analyze.
 
-There are no prelab questions this week: your recent hard work with 
-conservation of momentum in class should have prepared you for the
-analysis in this lab.  
+\section*{Important notes to keep in mind throughout the lab:}
 
-\bigskip
-\noindent {\bf{Technical hints}}
+\begin{itemize}
+\item The pucks use up batteries fast, so be sure to \textbf{only} turn them on during their brief collisions. I have limited extra batteries.
+\item Verify that the batteries in your puck are strong enough during every experiment. When turned on and placed on a level surface, the puck should experience almost zero friction from the surface.
+\end{itemize}
 
-To set the camera for movie mode, turn the thumbwheel so that the picture of
-the movie camera is aligned with the line on the camera.  Turn the camera on
-by pressing the ON/OFF button.  To choose between the standard and fast frame
-rates, press the FUNC/SET button on the back of the camera (the center of 
-the circular control ring), then press on the left or right sides of the 
-control ring to select an option, then press FUNC/SET again.  When you're ready 
-to start filming, press the shutter release button; press it again to end the 
-movie.  To play back your movie on the LCD screen, first press the play/record 
-button (an arrow pointing right and a red camera icon, above and left from the 
-control ring), then press FUNC/SET twice to play.  Press the play/record button
-again to go back to recording mode.
+\section{Tutorial}
+This portion of the lab should not be included in your report; it is just to teach the software.
+\begin{itemize}
+\item Start LoggerPro. Go to ``File'' then ``Open.'' By default, you should be in a folder called ``Experiments.'' Navigate to the subfolder ``Tutorials'' and open  the 
+file ``12 Video Analysis.cmbl'' in the Tutorials folder.
+\item Complete the tutorial. It may be helpful to resize the video before adding data points. Do not proceed past this step until you understand the basic procedure for video analysis and can obtain a fit coefficient consistent with $-4.9~\rm m/s^2$, as described in the tutorial. 
 
-When you are ready to import the movies onto the computer, connect the USB 
-cable to the port on the left side of the camera (as seen from the front, 
-under a cover marked ``DC IN DIGITAL A/V OUT'') and to the front of the 
-computer.  The computer should recognize the camera and offer to open a 
-choice of programs: pick the Microsoft Scanner and Camera Wizard. 
-Click ``Next'' a few times, then choose a name for your movie collection; a
-subfolder within your ``My Pictures'' folder will be created by this name
-to hold your movie files.
+\end{itemize}
 
 
-\bigskip
-\noindent {\bf{Procedural notes}}
+\section{Experiments}
+
+
 
 \begin{enumerate}
-\item Try to level your lab table(s) with appropriate shims so that a puck
-placed on it/them gains little momentum from gravitational interactions.
-\item Determine the mass of each puck.
-\item Film several collisions between pucks on the table.  Include at least:
-  \begin{itemize}
-  \item a collision between a moving puck and one that is at rest.
-  \item a nearly head-to-head collision between two pucks.
-  \item a glancing collision between two pucks moving in roughly opposite directions.
-  \end{itemize}
-Hold the camera as steady as you can, with its sensor plane nearly parallel 
-to the plane of the table.  Include an object of known length (such as a ruler)
-in each clip.  Check that your video looks reasonable when played back on the 
-camera's display.  
-\item Start the {{\em{Logger Pro}}} application and open the 
-file ``12 Video Analysis.cmbl'' in the Tutorials folder.
-Work through the tutorial on video analysis features.
-\item Using the {\em Logger Pro} software package, select the 
-  coordinates of the centers of the pucks in each frame of one of your 
-  two-puck collision videos.
-\item Determine the $x$ and $y$ components of the momentum vectors of
-  each of the pucks before and after the collision.  Based on the standard 
-  deviation across several frames, estimate the uncertainty of the measurement 
-  of each of these momentum components.  Is each component of the total  
-  momentum of the system conserved (within your estimated experimental
-  uncertainty)?
-\item Compute the kinetic energies of each of the pucks, before and after
-  the collision, including uncertainties.  Does the total energy of 
-  the system appear to be conserved?
-\item Repeat steps 5 through 8 for as many of your other two-puck videos 
+
+\item	Determine the mass of each puck. Note that the pucks do not all have equal mass, so be sure you keep track of which is which somehow.
+\item	Find a suitable flat surface on which to film your collision. You can use a lab table, but you may need to level it, and you need to be able to film from above. The hallway floor is another strategy. Devise your own strategy.
+\item	Ensure that an object of known size is in the shot, so that you can set the video scale in Logger Pro.
+\item	Choose a cell phone that will be your camera. I’m unsure what video formats modern Apple phones use, but I know this works with nearly any Android phone. If you have the option, set the resolution of the video fairly low and the framerate fairly high, so that the file size is reasonable.
+\item	Prepare to film collisions. One team member should hold the cell phone directly above the point of impact. It is very important that you keep the camera stationary and pointed directly downward at the collision. Start the filming right before the collision, and stop the filming after it. Each video should only be seconds long.
+\item	At least two other team members will control the two pucks. Successfully film several collisions such as:
+\begin{itemize}
+\item	A collision between a moving puck and one that is at rest (one team member will have to hold the stationary puck stationary until just before the collision), but don’t make it exactly head-on 
+\item	A glancing collision between two pucks moving in roughly opposite directions
+\item	A head to head collision between two pucks
+\item     A collision with pucks with velcro on them so that they stick together
+\end{itemize}
+\item	Ensure you captured the collisions on video successfully. If the camera moved, or was at an angle, or didn’t fully capture the collision, try again until you get a good video. The entire lab depends on having good video data.
+\item	Email the videos to yourself and download them to the lab computer, or use another method to get them onto the lab computers.
+\item	Choose an interesting video to analyze first, and open LoggerPro. Depending on the video format your phone used, LoggerPro may be able to open it directly via Insert $\rightarrow$ Movie.
+\item	If the movie will not open in a working state, you need to convert your movie format. You can use an online converter like \url{https://video.online-convert.com/convert-to-avi}. In the “Select Video Codec” option, set it to “mjpeg”. Convert and download your movie. Open it in Logger Pro via Insert $\rightarrow$ Movie. Be sure it plays as expected.
+\item	Use the same techniques as in the tutorial to obtain position and velocity data for both pucks. Remember to set your scale, and be sure to add a data series for the second puck by using the sixth buttom from the top on the right-side video controls.
+\item	Copy all of the position and velocity data for the two pucks to Excel or another spreadsheet. You should have \textbf{nine} columns of non-zero data, with precision to at least several decimal places.
+\item 	Create new columns for the x and y momenta of puck 1, the x and y momenta of puck 2, and the total x and total y momenta for the system. Use formulae to calculate the values for these cells. You should have added six more columns of data in this step.
+\item	Make a scatter plot of the x momentum of puck 1 as a function of time. On the same plot, right click and use “Select Data” to add two more data series to the plot: one that shows the x momentum for puck 2 and one that shows the total x momentum of the system. You should now have three data series plotted on one graph.
+\item	Repeat for the y momenta, so that you have an additional graph again with three data series displayed.
+\item What do your results say? Do your graphs behave as expected? Based on the standard deviation across several frames of video, estimate the uncertainty of the measurement of each of these momentum components.  Is each component of the total momentum of the system conserved (within your estimated experimental uncertainty)?
+\item	You have not yet encountered the formal definition of energy in class, but it is another conserved quantity like momentum. The kinetic energy of an object, which is a scalar quantity, can be thought of as the energy associated with the object's movement; a moving object has energy. You can calculate the kinetic energy of an object via $K=\frac{1}{2}mv^2$ where $v$ is the object's speed. Determine if the total kinetic energy of the two puck system is conserved during the collision. While total energy is a conserved quantity, it doesn't necessarily have to remain in the form of \textit{kinetic} energy. We broadly group collisions into three categories:
+\begin{itemize}
+\item Elastic collisions conserve total system kinetic energy.
+\item Inelastic collisions do not conserve kinetic energy.
+\item Super-elastic collisions \textit{gain} kinetic energy during the collision.
+\end{itemize}
+How would you describe your collision (keeping in mind your experimental uncertainty)?
+\item Repeat steps 11 through 19 for as many of your other two-puck videos 
   as time allows.
 \end{enumerate}
 
