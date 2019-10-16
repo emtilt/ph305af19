@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+
+\newcommand{\squishlist}{
+   \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}      \setlength{\parsep}{3pt}
+      \setlength{\topsep}{3pt}       \setlength{\partopsep}{0pt}
+      \setlength{\leftmargin}{1.5em} \setlength{\labelwidth}{1em}
+      \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishend}{
+    \end{list}  }
+
+\usepackage{times}
+\usepackage{mathptm}
+\usepackage{fullpage}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{center}
+{\bf{Regis University -- Physics 305A -- Fall 2019}} \\
+{\bf{Lab 8: Energy in Springs}} \\
+\medskip
+\end{center}
+
+\medskip
+
+In this lab, we will check our understanding of transformations of 
+energy. Specifically, we will work with kinetic 
+energy ($K = \frac{1}{2} m v^2$), gravitational potential 
+energy ($\Delta U_g = m g \Delta y$), and potential energy stored in a 
+spring ($U_s = \frac{1}{2} k_s s^2$).  This lab handout is 
+intentionally a short outline; you are expected to fill in the 
+details of the procedure based on your understanding of the physical
+principles. This week you're welcome to use whatever calculational tools you prefer -- Excel, Google Sheets, Python, etc.
+
+\bigskip
+
+\noindent {\bf {Part 1 -- Measuring spring stiffness}}
+
+\medskip
+
+There is a general connection between potential energy and force,
+expressed by $F_x = - \frac{d U} {d x}$.  \\
+If we apply this to a spring's potential energy, we find that 
+$F_s = - \frac{d}{d s} (\frac{1}{2} k_s s^2) = - k_s s$, a relationship
+that is often called ``Hooke's Law.''  It indicates that the force
+exerted by a spring is proportional to the distance by which the spring
+has been stretched.
+You should be able to use this relationship to set up an experiment 
+to measure the spring stiffness (often called the ``spring constant'') 
+$k_s$ for a particular spring by 
+hanging different masses from the spring and measuring by how much it
+stretches.  Specifically, you should determine it from a {\bf graph} of 
+$F_s$ versus $s$; what do you expect the slope and the intercept of 
+that graph to represent?
+
+In Logger Pro, you can enable an option to display its calculation of 
+the uncertainties on the slope and intercept of a graph.  You should collect at 
+least enough data to determine $k_s$ with an uncertainty of less than about
+5 percent of the value.
+
+Use this method to determine the stiffness of two different springs, 
+and compare them to their nominal values.  Does your measured stiffness
+agree within the calculated uncertainty?  Does the intercept of your graph 
+agree with what you expect, to within its uncertainty?
+
+\bigskip
+
+\noindent {\bf {Part 2 -- Conservation of energy}}
+\medskip
+
+You can hang a known mass from one of the springs that you have now 
+characterized, and you can allow it to bounce up and down.  This system
+is called a ``simple harmonic oscillator.''  Set up your oscillator so that 
+it bounces above an ultrasonic motion detector, which should show
+you beautiful sinusoidal graphs of the vertical position $y$ and the
+vertical velocity component $v_y$ versus time.
+Determine values for $K$, $U_g$, and $U_s$ at three points in the motion of 
+the mass:
+\squishlist
+\item the highest point
+\item the center of the motion
+\item the lowest point
+\squishend
+To what extent does the total energy $K + U_g + U_s$ remain constant
+over this full cycle?
+
+\end{document}
