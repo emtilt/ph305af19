@@ -1,0 +1,185 @@
+\documentclass[10pt]{article}
+
+\usepackage{mi_lab_include_2015-06-01}
+
+
+\rhead{{\color{HeadingColor}VP05 Space Voyage Part 1}}
+
+
+\begin{document} 
+
+\begin{center}
+{\color{HeadingColor}{{\LARGE {\textbf{A Space Voyage: Part 1}}}}}
+\end{center}
+
+\section*{Objectives}
+
+In this program you will model the motion of a spacecraft moving near the Earth. You will use your working program to explore the effect of the spacecraft's initial velocity on its trajectory. Before doing this activity you should have read Section 3.6 of the \MI textbook, which discusses the structure of a computational model that includes the gravitational force.  This activity will require you to bring together ideas from previous activities in which you 
+\begin{inparaenum}[(1)]
+%\item wrote a program to model the motion of an object subject to a constant force,
+\item wrote a program to calculate the gravitational force between two objects, and 
+\item used an arrow object and a scale factor to visualize a gravitational force.\\
+\end{inparaenum}
+
+After completing this activity you should be able to:\\
+
+\begin{compactitem}[\color{MIBlue}$\bullet$]
+\item Identify what quantities must be calculated inside a computational loop
+\item Write a program to model the motion of two gravitationally interacting objects
+\item Explain why the initial velocity of an object affects its trajectory as it moves near a more massive object
+\item Draw a diagram showing the directions of momentum and net force at different locations along an elliptical orbit
+\end{compactitem}
+
+\section{Explain and Predict}
+
+Study the following VPython program carefully. Make sure you understand the whole program, but don't run the program yet. Reading and explaining program code is an important part of learning to create and modify computational models.
+
+\color{CodeColor}
+\begin{Verbatim}[frame=single]
+from __future__ import division, print_function
+from visual import *
+scene.width = scene.height = 800
+
+G = 6.7e-11
+mEarth = 6e24
+mcraft = 15e3
+deltat = 60
+
+Earth = sphere(pos=vector(0,0,0), radius=6.4e6, color=color.cyan)
+craft = sphere(pos=vector(-10*Earth.radius, 0,0), radius=1e6,
+               color=color.yellow, make_trail=True)
+vcraft = vector(0,2e3,0)
+pcraft = mcraft*vcraft
+t = 0
+scene.autoscale = False ##turn off automatic camera zoom
+
+while t < 10*365*24*60*60:
+    rate(100)     
+    craft.pos = craft.pos + (pcraft/mcraft)*deltat
+    t = t+deltat
+\end{Verbatim}
+\color{black}
+
+Without running the program, answer the following questions:
+
+\begin{compactitem}[\color{MIRed}$\Rightarrow$]
+\item What is the physical system being modeled? 
+\item In the real world, how should this system behave? On the left side of your whiteboard or paper, draw a sketch showing how you think the objects should move in the real world. 
+\item Will the program as it is now written accurately model the real system?
+\item On the right side of the whiteboard or paper, draw a sketch of how the objects created in the program will move on the screen, based on your interpretation of the code.
+\end{compactitem}
+
+
+\checkpoint
+
+\section{Modify and Extend the Model}
+
+\begin{compactitem}[\color{MIRed}$\Rightarrow$]
+\item Run the program.   
+\item How did your prediction compare to what you saw? Did something happen that you didn't expect to happen?
+\item How should the program be changed so that it is a physically reasonable model of the system?
+\item Modify the program.  Run it and compare its behavior to the behavior you expect from the real system.
+\end{compactitem}
+
+\checkpoint
+
+\section{Visualize Momentum}
+
+In a previous activity, you used arrows to visualize gravitational force vectors. In this program, you will use an arrow to visualize the momentum of the spacecraft.  Note that you want one arrow that moves with the spacecraft--you don't want to create many arrows.  Therefore you will create the arrow before the loop, and change its \code{pos} and \code{axis} inside the loop, just after updating the \code{pos} of the spacecraft.  You may review the video on scale factors if necessary: \textit{VPython Instructional Videos: 5. Scale Factors } \url{http://vpython.org/video05.html}\\
+
+\begin{compactitem}[\color{MIRed}$\Rightarrow$]
+\item Print the initial momentum of the spacecraft. 
+\item Use this value to decide on a value for a scale factor that will make the arrow representing momentum a reasonable length in the display.
+\item Before the computational loop:
+\begin{compactitem}[\color{MIRed}$\Rightarrow$]
+\item Add a line of code that assigns the symbolic name \code{sf} to the scale factor.   
+\item Create an arrow named \code{parr} to represent the craft's momentum.
+\end{compactitem}
+\item Inside the loop, add two lines of code (after the position update) like this:\\\\
+\hspace{20pt}\code{parr.pos = craft.pos}\\
+\hspace{20pt}\code{parr.axis = pcraft * sf}\\
+
+\item Once you have seen the entire orbit, you may have to adjust the scale factor.
+\end{compactitem}
+
+\section{Testing a Value of a Variable}
+
+An \code{if} statement can be used to instruct VPython to do something only in a particular situation.  The action to take is indented after the \code{if} statement.  For example, consider the following code fragment:
+
+\color{CodeColor}
+\begin{Verbatim}[frame=single]
+a = 3
+if a < 4:
+    sphere(color=color.green)
+box(pos=vector(3,3,0), color=color.cyan)
+\end{Verbatim}
+\color{black}
+
+\begin{compactitem}[\color{MIRed}$\Rightarrow$]
+\item Try the code above in a new program window.  What does it do?   
+\item What happens when you replace \code{a = 3} with \code{a = 8}?
+\end{compactitem}
+
+\subsection{Detecting a Collision}
+
+If your spacecraft collides with the Earth, the program should stop.\\
+
+\begin{compactitem}[\color{MIRed}$\Rightarrow$]
+\item Add code similar to the following inside your loop (using the name you defined for the relative position vector between the spacecraft and the center of the Earth):   
+\end{compactitem}
+
+
+\color{CodeColor}
+\begin{Verbatim}
+if mag(r) < Earth.radius:
+     break  ## exit from the loop
+\end{Verbatim}
+\color{black}
+
+The \code{break} instruction tells VPython to get out of the loop and go to the first instruction after the loop (if there is one.)  Because the \code{break} instruction is indented after the \code{if} statement, it will be executed only if the \code{if} test returns a value of \code{True}.
+
+
+\section{Direction of Momentum}
+
+Record your answers to the following questions:\\
+
+\begin{compactitem}[\color{MIRed}$\Rightarrow$]
+\item For this elliptical orbit, what is the direction of the spacecraft's momentum vector? Tangential? Radial? Something else?
+\item What happens to the momentum as the spacecraft moves away from the Earth?   
+\item As it moves toward the Earth?
+\item Why? Explain these changes in momentum in terms of the Momentum Principle.
+\end{compactitem}
+
+
+\section{Effect of the Initial Velocity}
+
+\begin{compactitem}[\color{MIRed}$\Rightarrow$]
+\item Approximately, what minimum initial speed is required so that the spacecraft ``escapes'' and never comes back? You may have to zoom out to see whether the spacecraft shows signs of coming back. You may also have to extend the time in the while statement.
+\item What initial speed is required to make a nearly circular orbit around the Earth? You may wish to zoom out to examine the orbit more closely.   
+\item How does increasing the initial speed affect the orbit? Explain this by considering the first few time steps.
+\item How does decreasing the initial speed affect the orbit? Explain this by considering the first few time steps.
+\end{compactitem}
+
+\section{Adding an Arrow to Represent Force }
+
+\begin{compactitem}[\color{MIRed}$\Rightarrow$]
+\item Choose an initial speed that produces an elliptical orbit.
+\item Add a second, different colored arrow representing the net force on the spacecraft.  This arrow should also move with the craft.  You'll need a different scale factor for this arrow.
+\item Are the net force on the craft and the momentum of the craft in the same direction?
+\item What is the relative direction of these arrows when the craft is slowing down?  
+\item Speeding up?  
+\item Draw a diagram showing the directions of the craft's momentum and the net force on the craft at 6 different locations along an elliptical orbit. At each location note whether the speed of the craft is increasing, decreasing, or momentarily not changing.
+\end{compactitem}
+
+
+%\section{Turn in Your Program}
+%
+%Choose an initial speed that produces an elliptical orbit.  Turn in your program and the answers to the questions posed above.
+\vspace{24pt}
+\hrule
+
+\vfill
+{\small \today}
+
+\end{document}
+

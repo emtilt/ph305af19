@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr} 
+\pagestyle{empty}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%New Command
+\newcommand{\detail}[2]
+{\begin{tabularx}{6.5in}{p{2in} X}
+\textbf{#1:} & #2
+\end{tabularx}
+\vspace{11pt}}
+
+%Activity
+\detail{Name of Activity}{Calculating and Displaying Gravitational Force}\\
+\detail{Approximate Duration}{40 minutes}\\
+\detail{Relevant Section of Text}{3.6}\\
+
+\begin{description}
+\item[ Write on Board] 
+\end{description}
+
+\begin{itemize}
+\item Answer the 'planning' questions on a whiteboard \textbf{before} starting
+\end{itemize}
+
+\begin{description}
+\item[Checking Questions/Things to look for] 
+\end{description}
+
+\begin{itemize}
+\item Students have difficulty with finding the scale factor
+\begin{itemize}
+\item The video goes through how to make a first approximation, but it is mostly trial and error to find a good scale factor
+\item Must multipy the scale factor by the F$_{\text{grav}}$ in the axis of the arrow
+\end{itemize}
+\end{itemize}
+
+\begin{description}
+\item[Grading] 
+\end{description}
+
+\begin{itemize}
+\item Program runs and looks reasonable
+\item Correct physics
+\begin{itemize}
+\item Gravitational force calculated correctly
+\item Arrows pointing in the correct direction
+\item Arrows have correct relative magnitude
+\end{itemize}
+\item Reasonable scale factor
+\end{itemize}
+
+\begin{description}
+\item[General Grading Key for VPython] 
+\end{description}
+\begin{itemize}
+\item 100\% of total points for a program that runs correctly and exhibits all the required features.
+\item 0\% for a program that does not run (i.e. produces an error message and quits).
+\item For partially correct or partially complete programs, give:
+\begin{itemize}
+\item 90\% for a program with no physics errors, but one missing feature
+\item 80\% for a program with no physics errors, but several missing features
+\item 50-70\% for a program with some physics errors
+\item 40\% for a rudimentary program that is not complete
+\end{itemize}
+\end{itemize}
+
+\end{flushleft}
+\end{noindent}
+\end{document}

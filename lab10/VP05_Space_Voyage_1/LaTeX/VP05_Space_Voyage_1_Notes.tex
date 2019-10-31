@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr} 
+\pagestyle{empty}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%New Command
+\newcommand{\detail}[2]
+{\begin{tabularx}{6.5in}{p{2in} X}
+\textbf{#1:} & #2
+\end{tabularx}
+\vspace{11pt}}
+
+%Activity
+\detail{Name of Activity}{A spacecraft voyage, part 1: Spacecraft and Earth }\\
+\detail{Approximate Duration}{45 minutes}\\
+\detail{Relevant Section of Text}{3.6}\\
+
+\begin{description}
+\item[ Write on Board] 
+\end{description}
+
+\begin{itemize}
+\item Review previous programs (Motion part 2 \& Gravitational Force Calculation).
+\item Read and Follow Instructions!
+\item \textbf{Do not run the program} until directed to do so in the instructions.
+\end{itemize}
+
+\begin{description}
+\item[Checking Questions/Things to look for] 
+\end{description}
+
+\begin{itemize}
+\item Students must make a prediction of what they would expect to see when they run the program before doing so.
+\item If students produce an incorrect prediction, ask students to justify why their prediction was incorrect, or why the visual output produced the observed behavior of the spacecraft.
+\item Encourage groups to use earlier programs for reference.
+\item Emphasize the importance of initial conditions and time steps.
+\item Make sure they only update the position and axis of the arrow inside the while loop and NOT the whole arrow.
+\item Ask them the questions from the handout and emphasize the difference between momentum and change in momentum.
+\begin{itemize}
+\item Why does spacecraft move faster when closer to the Earth?
+\subitem \textbf{Main Points:}
+\begin{itemize}
+\item \textbf{NOT} because the force is bigger (this implies the mistaken idea that $p$ is proportional to $F$ rather than $\Delta p$ is proportional to $F$).
+\item On the way toward the Earth there is a parallel component of the force in the direction of motion, which increases the magnitude of momentum.
+\item It goes slower away from the Earth because on the way away from the Earth there is a parallel component of the force opposite to the motion, which decreases the magnitude of momentum.
+\item Use example of spring-mass system to make the contrast: the net force is greatest when the speed is zero, and the net force is smallest when the mass has its maximum speed.
+\end{itemize}
+\item What is the direction of momentum?
+\subitem \textbf{Main Point:} Along the direction of motion
+\subitem ($\Delta \vec{p}$ is in the direction of the net force)
+\end{itemize}
+\item Final program should have an elliptical orbit and an arrow to represent the momentum.
+\end{itemize}
+
+\begin{description}
+\item[Grading] 
+\end{description}
+
+\begin{itemize}
+\item Program is running and looks reasonable
+\item Proper initial conditions
+\item Correct physics
+\begin{itemize}
+\item Gravitational force calculated correctly
+\item Position update and momentum principle used correctly
+\item Arrow points in the correct direction
+\item Arrow has correct magnitude (should represent momentum) and changes appropriately
+\end{itemize}
+\item Reasonable scale factor
+\item Extra credit for force arrow
+\end{itemize}
+
+\begin{description}
+\item[General Grading Key for VPython] 
+\end{description}
+\begin{itemize}
+\item 100\% of total points for a program that runs correctly and exhibits all the required features.
+\item 0\% for a program that does not run (i.e. produces an error message and quits).
+\item For partially correct or partially complete programs, give:
+\begin{itemize}
+\item 90\% for a program with no physics errors, but one missing feature
+\item 80\% for a program with no physics errors, but several missing features
+\item 50-70\% for a program with some physics errors
+\item 40\% for a rudimentary program that is not complete
+\end{itemize}
+\end{itemize}
+
+\end{flushleft}
+\end{noindent}
+\end{document}
