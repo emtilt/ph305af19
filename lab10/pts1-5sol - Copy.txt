@@ -3,7 +3,7 @@ scene.width = 1000
 pmass=6e24
 prad=3e6
 smass=1.5e4
-g=6.674e-11
+g=6.673e-11
 fgarrowscale=7e4
 
 planet=sphere(pos=vec(0,-2e7,0), radius=6e6, color=color.red)
