@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+
+\newcommand{\squishlist}{
+   \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}      \setlength{\parsep}{3pt}
+      \setlength{\topsep}{3pt}       \setlength{\partopsep}{0pt}
+      \setlength{\leftmargin}{1.5em} \setlength{\labelwidth}{1em}
+      \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishend}{
+    \end{list}  }
+
+\usepackage{times}
+\usepackage{mathptm}
+\usepackage{fullpage}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{center}
+{\bf{Regis University -- Physics 305A -- Fall 2019}} \\
+{\bf{Lab 12: Angular Monetum}} \\
+\end{center}
+
+In this lab, you will test the idea of angular momentum conservation.
+As in the last few labs, I haven't detailed every necessary step, so you will need to 
+think through the details of how to do the experiment.
+
+The basic idea of this experiment will be to start one disk spinning and then drop a second disk onto it, creating a completely inelastic collision. After the collision, both disks will be rotating together, but the angular speed will have changed.
+
+During the last lab, you showed that the moment of intertia of the rotating sensor is much smaller than that of the disk, so we will neglect its effects throughout this lab. We will also neglect the mass of the small rubber pads.
+\bigskip
+
+\begin{enumerate}
+\item Connect the rotational motion sensor to the computer through 
+the DIG/SONIC 1 port on the Vernier LabPro interface, and run the 
+Logger Pro software.  This is one of the few sensor types that cannot be 
+automatically detected and configured by the software; you will need to 
+select it using the dialog box that appears when you choose the menu option
+``Experiment $\rightarrow$ Set Up Sensors $\rightarrow$ LabPro: 1.''  
+In that dialog box, use the pop-up menu under DIG/SONIC 1 and 
+select ``Choose Sensor... $\rightarrow$ Rotary Motion.''
+This sensor measures the angle through which the pulley on top is turned.  
+
+\item Mount the rotational motion sensor on a support rod and clamp it to 
+the edge of your table.  The set up is simiar to what you did in Lab 11, however you won't need any thread or hanging mass for this experiment.
+\item Use conservation of angular momentum to derive an expression for the angular velocity just after the collision in terms of the  angular velocity of the first disk just before the collision. 
+\item Make sure you have one disk without rubber pads and one with them. Create one if necessary.
+\item Place the metal disk on rotary sensor. \textbf{Gently} start it spinning with your hand, and then \textbf{gently} drop the second disk (with the pads) onto the spinning disk. Use LoggerPro to collect data throughout.
+\item Given the (experimentally measured) angular velocity just before the collision, what is the theoretically predicted angular velocity of the system just after the collision? How does this compare to the experimental value?
+\item Repeat the experiment, but drop an irregularly shaped object (with attached rubber pads, if necessary) onto the spinning disk. Use conservation of angular momentum, the measured before-and-after angular velocities, and a calculation of the disk's moment of inertia, to determine the moment of inertia of the irregularly-shaped object. You need to choose your irregular object carefully: it should be similarly sized to the disk, have a flat side on which to land, and be light enough that dropping it doesn't damage the apparatus.
+\end{enumerate}
+
+\vspace{1in}
+
+\textit{If there is any time remaining upon your completion of this lab, I suggest using it to work on your computational project!}
+\end{document}
