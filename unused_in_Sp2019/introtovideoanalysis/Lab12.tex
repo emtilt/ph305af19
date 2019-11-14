@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+
+\newcommand{\squishlist}{
+   \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}      \setlength{\parsep}{3pt}
+      \setlength{\topsep}{3pt}       \setlength{\partopsep}{0pt}
+      \setlength{\leftmargin}{1.5em} \setlength{\labelwidth}{1em}
+      \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishend}{
+    \end{list}  }
+
+\usepackage{times}
+\usepackage{mathptm}
+\usepackage{fullpage}
+
+\begin{document}
+
+\begin{center}
+{\bf{Regis University -- Physics 305A -- Fall 2017}} \\
+{\bf{Lab 12: Video Analysis}} \\
+\end{center}
+
+\noindent {\bf {Tutorial: Shooting a basketball}}
+
+First, let's work through a tutorial that comes with the Logger Pro program.
+Start the application and open the file ``12 Video Analysis.cmbl'' in the 
+Tutorials folder.  Using the sample video there, follow the instructions to 
+set the scale and to track the motion of the basketball from the time it leaves 
+the player's hand to the time it hits the floor.
+Please analyze this data in two ways:
+\squishlist
+\item Start with graphs of $x$ vs. $t$ and $y$ versus $t$.  Fit each of
+  them to an appropriate functional form (linear or parabolic).  
+  From the fit parameters, calculate the initial $x$ and $y$ velocities and 
+  the $y$ acceleration.
+\item Next, switch to graphs of $v_x$ vs. $t$ and $v_y$ versus $t$.  To what 
+  extent is $v_x$ constant?  Fit a linear model to your graph of $v_y$; 
+  what is the value of $y$ acceleration?  Does it match what you 
+  would expect, and does it match the value that you found from the graph
+  of $y$ vs. $t$?
+\squishend
+
+\medskip
+\noindent {\bf {Your own video}}
+
+Next, choose something to analyze yourself with video analysis.
+If you can't think of anything better, you could film a coffee filter (or a
+stack of them) dropping and determine how long it takes for it to reach its terminal
+speed.  
+
+You can use your own phone to record a video, or we have cameras
+that you can use.  Remember that you need to include something in the frame 
+to set the scale; it should be in the plane of motion of the object, and it 
+might be a measured dimension on the moving object itself.
+Import your video into Logger Pro, and analyze it as you did with the
+basketball.
+
+
+\medskip
+\noindent {\bf {Other tasks for today}}
+
+\squishlist
+\item You should tell me about your ideas for an experimental project.
+\item You should continue working with your group on your computational project.
+\squishend
+
+\medskip
+\noindent {\bf {Computational project presentations}}
+
+\noindent In your group's presentation on Nov. 30, you will need to 
+\squishlist
+\item introduce the computational problem, 
+\item outline the structure of your program, 
+\item demonstrate it (it should produce an animation that will be interesting 
+  to watch), and 
+\item explain the scientific conclusions that you can draw from experimenting 
+  with the program and observing the output.
+\squishend
+You will need to prepare visual slides to accompany your presentation.
+
+\end{document}

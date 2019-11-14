@@ -1,0 +1,55 @@
+\documentclass[a4paper]{article}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%New Command
+\newcommand{\detail}[2]
+{\begin{tabularx}{12 cm}{p{5cm} X}
+\textbf{#1:} & #2
+\end{tabularx}
+\vspace{0.5cm}}
+
+%Activity
+\detail{Name of Activity}{The Air Resistance Force}\\
+\detail{Approximate Duration}{40 minutes}\\
+\detail{Relevant Section(s) of Text}{7.10}\\
+
+\begin{description}
+\item[ Write on Board] 
+\end{description}
+
+\begin{itemize}
+\item Read entire handout \textbf{before} beginning
+\item Drop filters from near the ceiling
+\item Use Excel to graph $F_{\text{air}}$ vs. terminal speed
+\item Use ``power'' fit for trendline (NOT ``linear'' fit)
+\end{itemize}
+
+\begin{description}
+\item[Checking Questions/Things to look for] 
+\end{description}
+
+\begin{itemize}
+\item Does it make sense for the time to be greater or less with more filters? How do you know?
+\subitem \textbf{Main Point:} Cross-sectional area has not changed, but total mass has increased, so you would expect to reach terminal velocity faster (time would be shorter)
+\item What would you expect ``$n$'' to be?
+\end{itemize}
+
+\begin{description}
+\item[Grading] 
+\end{description}
+
+\begin{itemize}
+\item All data is present and reasonable
+\item Graph is reasonable (proper axes and use of power curve)
+\item Clear statement of the values of ``$n$'' and the drag coefficient $C$
+\end{itemize}
+
+\end{flushleft}
+\end{noindent}
+\end{document}

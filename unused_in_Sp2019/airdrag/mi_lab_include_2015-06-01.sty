@@ -1,0 +1,39 @@
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{upquote}
+\usepackage{paralist}
+%\usepackage{mathpazo} % Palatino
+%\usepackage[hidelinks]{hyperref}  % active web links
+\usepackage[colorlinks, linkcolor=black, urlcolor=blue]{hyperref}  % active web links
+\parindent 0pt
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}   % % need this to draw a box around verbatim text
+\usepackage{datetime}
+\renewcommand{\dateseparator}{-}
+\yyyymmdddate
+
+\definecolor{MIBlue}{cmyk}{1.0,0.5,0.4,0.0}
+\definecolor{PaleBlue}{cmyk}{0.1,0.05, 0.04, 0.0}
+\definecolor{MIRed}{cmyk}{0.0, 1.0, 1.0, 0.2}
+\definecolor{CodeColor}{cmyk}{0.5,1.0,0.0,0.2}
+\definecolor{MIMagenta}{cmyk}{0.0,1.0,0.0,0.0}
+\definecolor{HeadingColor}{cmyk}{0.0, 1.0, 1.0, 0.2}
+
+\pagestyle{fancy}
+%\lhead{{\color{HeadingColor}Matter \& Interactions 4e}}
+% use \rhead{Short Title \thepage} at beginning of document
+
+\newcommand{\MI}{\textit{Matter \& Interactions 4e }}
+\newcommand{\MIperiod}{\textit{Matter \& Interactions 4e. }} % for end of sentence
+\newcommand{\checkpoint}{
+{\begin{center}\colorbox{MIBlue}{\color{white}\textbf{Check your work before continuing.}}\end{center}}
+}
+
+\newcommand{\mivec}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\while}{\texttt{\color{CodeColor}while }}
+\newcommand{\po}[2]{\ensuremath{#1\times10^{#2}}}
+\newcommand{\code}[1]{\texttt{\color{CodeColor}#1}}
